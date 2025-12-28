@@ -1,5 +1,7 @@
 # EasyOCR2
 
+**Fastly Built by [FastBuilder.AI](https://fastbuilder.ai)** 🚀
+
 Next-generation ready-to-use OCR with 80+ supported languages and all popular writing scripts.
 
 ## Installation
