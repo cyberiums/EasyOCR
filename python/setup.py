@@ -31,7 +31,7 @@ setup(
     name='easyocr2',
     packages=find_packages(),
     include_package_data=True,
-    version='1.0.0',
+    version='1.0.1',
     install_requires=requirements,
     entry_points={"console_scripts": ["easyocr2=easyocr2.cli:main"]},
     license='Apache License 2.0',
