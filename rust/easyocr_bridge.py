@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-EasyOCR Python bridge script for RustOCR
+EasyOCR2 Python bridge script for rustocr
 This script is called by the Rust binary and handles the actual OCR processing
 """
 import argparse
 import json
 import sys
-import easyocr
+import easyocr2 as easyocr
 
 
 def main():
-    parser = argparse.ArgumentParser(description='EasyOCR Python bridge')
+    parser = argparse.ArgumentParser(description='EasyOCR2 Python bridge')
     parser.add_argument('--languages', required=True, help='Comma-separated language codes')
     parser.add_argument('--image', required=True, help='Path to image file')
     parser.add_argument('--gpu', type=lambda x: x.lower() == 'true', default=True, help='Use GPU')

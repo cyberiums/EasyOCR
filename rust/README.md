@@ -15,14 +15,14 @@ A fast Rust CLI wrapper for EasyOCR providing OCR capabilities with 80+ language
 Before using RustOCR, ensure you have:
 
 1. **Python 3.7+** installed
-2. **EasyOCR** Python library:
+2. **EasyOCR2** Python library:
    ```bash
-   pip install easyocr
+   pip install easyocr2
    ```
 
-   > **Note:** If you encounter import errors with EasyOCR (e.g., `bidi` module issues), try reinstalling:
+   > **Note:** If you encounter import errors, try reinstalling:
    > ```bash
-   > pip install --upgrade --force-reinstall python-bidi easyocr
+   > pip install --upgrade --force-reinstall easyocr2
    > ```
 
 3. **Rust toolchain** (for building from source):

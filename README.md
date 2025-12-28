@@ -1,17 +1,21 @@
-# EasyOCR
+# EasyOCR2
 
-Ready-to-use OCR with 80+ supported languages and all popular writing scripts including Latin, Chinese, Arabic, Devanagari, Cyrillic and more.
+Next-generation OCR with 80+ supported languages and all popular writing scripts including Latin, Chinese, Arabic, Devanagari, Cyrillic and more.
 
 ## 🌟 Two Implementations
 
-This repository contains both:
+This repository contains:
 
-### 1. **Python Library** (Original EasyOCR)
-Ready-to-use OCR powered by deep learning models.
+### 1. **Python Library (easyocr2)**
+Next-generation Python OCR powered by deep learning models.
 
 📖 **Documentation:** [Python Documentation](./python/README.md)
 
-### 2. **Rust CLI** 🦀 **NEW!**
+```bash
+pip install easyocr2
+```
+
+### 2. **Rust CLI (rustocr)** 🦀
 High-performance command-line interface with advanced features:
 - 🚀 Server mode for persistent processing (5-10x faster)
 - 📦 Batch processing with progress indicators
@@ -21,47 +25,58 @@ High-performance command-line interface with advanced features:
 
 📖 **Documentation:** [Rust Documentation](./rust/README.md)
 
+```bash
+cd rust
+cargo build --release
+```
+
 ## Quick Start
 
-### Python
+### Python (easyocr2)
 ```bash
-pip install easyocr
+pip install easyocr2
 ```
 
 ```python
-import easyocr
-reader = easyocr.Reader(['en'])
+import easyocr2
+reader = easyocr2.Reader(['en'])
 result = reader.readtext('image.jpg')
 ```
 
-### Rust CLI
+### Rust CLI (rustocr)
 ```bash
-# Install from releases
-# Or build from source
+# The Rust CLI uses easyocr2 Python library internally
+pip install easyocr2
+
+# Build and use rustocr
 cd rust
 cargo build --release
-
-# Use it
 ./target/release/rustocr -i image.jpg -l en
 ```
 
 ## Features
 
 - Support for 80+ languages
-- GPU acceleration
+- GPU acceleration  
 - Bounding box and confidence scores
 - Paragraph grouping
 - Custom model support
 
-## Examples
+## Architecture
 
-![Example](examples/example.png)
+```
+┌──────────────┐
+│   rustocr    │ (Rust CLI)
+│  (Fast I/O)  │
+└──────┬───────┘
+       │
+       ↓ subprocess
+┌──────────────┐
+│  easyocr2    │ (Python Library)
+│  (ML Models) │
+└──────────────┘
+```
 
 ## License
 
 Apache 2.0
-
-## Credits
-
-- Original EasyOCR by [JaiedAI](https://www.jaided.ai/easyocr)
-- Rust CLI by cyberiums contributors
