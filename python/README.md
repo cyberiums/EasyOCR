@@ -4,6 +4,21 @@
 
 Next-generation ready-to-use OCR with 80+ supported languages and all popular writing scripts.
 
+## ✨ Features
+
+### Core Capabilities
+- 🌍 **80+ Languages** Support
+- 🚀 **GPU Acceleration** (CUDA/MPS)
+- 📦 **Easy Installation** via pip
+- 🎯 **High Accuracy** with deep learning
+- 🔧 **Simple API** - just 3 lines of code
+
+### Integration
+- ✅ Works seamlessly with RustOCR CLI
+- ✅ Server mode for 5-10x performance
+- ✅ Batch processing support
+- ✅ REST API compatible
+
 ## Installation
 
 ```bash
