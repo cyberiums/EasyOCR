@@ -1,0 +1,47 @@
+# Rust
+/rust/target/
+/rust/**/*.rs.bk
+/rust/*.pdb
+/rust/Cargo.lock
+/rust/rustocr
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Models
+.EasyOCR/
+*.pth
+*.pkl
+
+# OS
+Thumbs.db

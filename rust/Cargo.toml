@@ -1,0 +1,17 @@
+[package]
+name = "rustocr"
+version = "0.2.0"
+edition = "2021"
+authors = ["RustOCR Contributors"]
+description = "A Rust CLI wrapper for EasyOCR providing OCR capabilities with 80+ languages support"
+license = "Apache-2.0"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+
+[[bin]]
+name = "rustocr"
+path = "src/main.rs"
